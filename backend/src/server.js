@@ -6,6 +6,8 @@ import allUserRouter from "../routes/UserRoutes.js"
 import cors from 'cors'
 import carRouter from '../routes/CarRouter.js';
 import msgRouter from '../routes/MsgRouter.js';
+import carRouter from '../routes/CarRouter.js';
+import AdminRouter from '../routes/AdminRouter.js';
 
 dotenv.config()
 
@@ -22,6 +24,7 @@ app.use("/api/allusers",allUserRouter);
 app.use("/api/car",carRouter)
 app.use("/api/car",carRouter);
 app.use("/api/msg",msgRouter);
+app.use("/api/admin",AdminRouter);
 
 app.listen(port, async () => {
     try {
