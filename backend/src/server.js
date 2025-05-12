@@ -3,8 +3,7 @@ import express from 'express';
 import connectDb from './db.js';
 import userRouter from '../routes/AuthRouter.js';
 import allUserRouter from "../routes/UserRoutes.js"
-import cors from 'cors'
-import carRouter from '../routes/CarRouter.js';
+import cors from 'cors';
 import msgRouter from '../routes/MsgRouter.js';
 import carRouter from '../routes/CarRouter.js';
 import AdminRouter from '../routes/AdminRouter.js';
@@ -21,7 +20,6 @@ const port = process.env.PORT || 5001;
 
 app.use("/api/auth", userRouter)
 app.use("/api/allusers",allUserRouter);
-app.use("/api/car",carRouter)
 app.use("/api/car",carRouter);
 app.use("/api/msg",msgRouter);
 app.use("/api/admin",AdminRouter);
